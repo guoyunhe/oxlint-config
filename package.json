@@ -45,9 +45,8 @@
   "scripts": {
     "build": "rive build",
     "build:watch": "rive build --watch",
-    "ci:eslint": "eslint -f json src -o ./.ci/eslint.json",
-    "lint": "eslint .",
-    "lint:fix": "prettier --write . && eslint --fix .",
+    "lint": "oxlint src",
+    "lint:fix": "oxlint --fix src",
     "format": "oxfmt .",
     "prepare": "husky",
     "start": "rive start",
@@ -58,7 +57,6 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
-    "oxlint": "^1.0.0",
     "@commitlint/config-conventional": "^19.8.1",
     "@mdx-js/react": "^3.1.1",
     "@types/node": "^22.19.17",
@@ -66,15 +64,10 @@
     "@types/react-dom": "^18.3.7",
     "@vitest/coverage-v8": "^3.2.4",
     "@vitest/ui": "^3.2.4",
-    "eslint": "^9.39.4",
-    "eslint-config-ali": "^16.6.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.5",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "oxfmt": "^0.45.0",
-    "prettier": "^3.8.3",
-    "prettier-config-ali": "^1.5.0",
+    "oxlint": "^1.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rive": "^3.4.0",
@@ -82,15 +75,14 @@
     "vitest": "^3.2.4"
   },
   "lint-staged": {
-    "*.{cjs,cts,js,jsx,mjs,mts,ts,tsx,vue}": "eslint --fix",
-    "*.{cjs,css,cts,html,js,json,jsx,less,md,mjs,mts,scss,ts,tsx,vue,yaml,yml}": "prettier --write"
+    "*.{cjs,cts,js,jsx,mjs,mts,ts,tsx,vue}": "oxlint --fix",
+    "*.{cjs,css,cts,html,js,json,jsx,less,md,mjs,mts,scss,ts,tsx,vue,yaml,yml}": "oxfmt"
   },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
     ]
   },
-  "prettier": "prettier-config-ali",
   "rive": {
     "template": "node",
     "doc": {

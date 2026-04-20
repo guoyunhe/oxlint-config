@@ -1,4 +1,4 @@
-import config from '.';
+import config from './index.js';
 
 describe('oxlint default config', () => {
   it('should be defined', () => {
