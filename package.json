@@ -43,8 +43,8 @@
     }
   },
   "scripts": {
-    "build": "rive build",
-    "build:watch": "rive build --watch",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
     "lint": "oxlint src",
     "lint:fix": "oxlint --fix src",
     "format": "oxfmt .",
