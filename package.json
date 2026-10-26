@@ -55,6 +55,9 @@
     "test:ui": "vitest --ui",
     "test:watch": "vitest"
   },
+  "dependencies": {
+    "oxlint-config-recommended": "^1.0.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
@@ -67,7 +70,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "oxfmt": "^0.45.0",
-    "oxlint": "^1.0.0",
+    "oxlint": "^1.89.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rive": "^3.4.0",

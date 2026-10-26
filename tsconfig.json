@@ -2,6 +2,7 @@
   "compilerOptions": {
     "types": ["vitest/globals", "rive/globals", "node"],
     "allowJs": true,
+    "allowImportingTsExtensions": true,
     "checkJs": false,
     "esModuleInterop": true,
     "isolatedModules": true,

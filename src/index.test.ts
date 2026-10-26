@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+import recommended from 'oxlint-config-recommended';
 import config from './index.js';
 
 describe('oxlint default config', () => {
@@ -22,5 +24,13 @@ describe('oxlint default config', () => {
   it('should have rules object', () => {
     expect(config).toHaveProperty('rules');
     expect(typeof config.rules).toBe('object');
+  });
+
+  it('should extend the recommended config', () => {
+    expect(config.extends).toContain(recommended);
+    expect(recommended.rules).toMatchObject({
+      'no-undef': 'error',
+    });
+    expect(config.rules).toMatchObject({ 'no-console': 'warn' });
   });
 });

@@ -18,6 +18,10 @@ Create an `oxlint.json` in your project root:
 }
 ```
 
+The config extends [oxlint-config-recommended](https://www.npmjs.com/package/oxlint-config-recommended),
+which includes Oxlint-supported rules from ESLint, Unicorn, and TypeScript's
+recommended sets.
+
 ## License
 
 [MPL-2.0](LICENSE)

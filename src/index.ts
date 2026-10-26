@@ -1,6 +1,8 @@
 import { defineConfig } from 'oxlint';
+import recommended from 'oxlint-config-recommended';
 
 export default defineConfig({
+  extends: [recommended],
   plugins: ['react', 'unicorn', 'typescript'],
   categories: {
     correctness: 'error',
@@ -8,6 +10,5 @@ export default defineConfig({
   },
   rules: {
     'no-console': 'warn',
-    'no-debugger': 'warn',
   },
 });
